@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Library_Management.GUI.CallCard_Mangement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Library_Management.GUI"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="800" >
+    <Grid>
+        <Grid >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="450"/>
+                </Grid.RowDefinitions>
+                <StackPanel  Grid.Row="0" Orientation="Horizontal" >
+                    <TextBlock Text=" Issue and Return" FontWeight="Bold" FontFamily="Arial" FontSize="20" Foreground="DimGray" Margin="15,10,10,10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBox FontWeight="Bold" Foreground="DimGray" FontSize="13" materialDesign:HintAssist.Hint="Name,ID Search" VerticalAlignment="Center" Width="140" Margin="390,5,5,0" />
+                    <Button Background="WhiteSmoke" Foreground="DimGray" BorderBrush="{x:Null}" Width="55" Margin="5,5,5,0" Height="25" Padding="0">
+                        <materialDesign:PackIcon Kind="Search" Width="25" Height="25"/>
+                    </Button>
+                </StackPanel>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" >
+                        <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                            <Image Width="170" VerticalAlignment="Top" HorizontalAlignment="Center" Source="/Resources/Natsu.png" Margin="5,0,0,0"/>
+                            <StackPanel Orientation="Horizontal" Margin="7,0,0,0">
+                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="30">
+                                    <materialDesign:PackIcon Kind="AccountOutline" Foreground="DimGray" Width="20" Height="20"/>
+                                </Button>
+                                <TextBlock Margin="0,3,0,0" Foreground="DimGray" Height="20" Text="Natsu Dragneel" FontSize="13" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="7,5,0,0">
+                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="30">
+                                    <materialDesign:PackIcon Kind="AccountBadgeOutline" Foreground="DimGray" Width="20" Height="20"/>
+                                </Button>
+                                <TextBlock Margin="0" Foreground="DimGray" Height="20" Text="002" FontSize="13" FontWeight="Bold"/>
+                            </StackPanel>
+                            <Button Padding="0" Margin="0,10,0,0" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" BorderThickness="0.5" Width="100" Height="30">
+                                Loan Book
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1" x:Name="CallCardView">
+                        
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+    </Grid>
+</UserControl>

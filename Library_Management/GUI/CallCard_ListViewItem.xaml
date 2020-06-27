@@ -1,0 +1,69 @@
+﻿<ListViewItem x:Class="Library_Management.GUI.CallCard_ListViewItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Library_Management.GUI"
+             mc:Ignorable="d" 
+             Padding="0">
+    <Expander Header="ID:10008987                26/03/2000                Status : Not returned" Foreground="DimGray" x:Name="EXpan"  VerticalAlignment="Top" Height="Auto" >
+        <Grid Width="590" Height="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Call Card" FontWeight="Bold" FontSize="13" Width="150" Height="30" TextAlignment="Center"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock Grid.Column="0" Width="60" Height="30" VerticalAlignment="Top" Text="List Book: " FontSize=" 13" FontWeight="Bold"/>
+                </Grid>
+                <ListView Grid.Column="1" x:Name="LstView" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                    <ListViewItem Height="20" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="180" Text=" Clean Code"/>
+                            <TextBlock Width="100" Text="ID: 0034A" TextAlignment="Center"/>
+                            <CheckBox Padding="0" VerticalAlignment="Bottom" Background="#9c958e" Margin="15,0,0,0" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="20" Padding="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="180" Text=" One Hundred Years of Solitude"/>
+                            <TextBlock Width="100" Text="ID: 0730A" TextAlignment="Center"/>
+                            <CheckBox Padding="0" VerticalAlignment="Bottom" Background="#9c958e" Margin="15,0,0,0" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="20" Padding="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="180" Text=" The Brothers Karamazov"/>
+                            <TextBlock Width="100" Text="ID: 1234A" TextAlignment="Center"/>
+                            <CheckBox Padding="0" VerticalAlignment="Bottom" Background="#9c958e" Margin="15,0,0,0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="20" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="180" Text=" Madame Bovary"/>
+                            <TextBlock Width="100" Text="ID: 9034F" TextAlignment="Center"/>
+                            <CheckBox Padding="0" VerticalAlignment="Bottom" Background="#9c958e"  Margin="15,0,0,0"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+
+                </ListView>
+                <Grid Grid.Column="2" MinHeight="90">
+                    <TextBlock Text="  Date borrow : 24/07/2020" FontSize="13" />
+                    <TextBlock Text="  Overdue : 8 Days" FontSize="13"  Margin="0,21,0,0"/>
+                    <TextBlock Text="  Fine : 16.000" FontSize="13"  Margin="0,42,0,0"/>
+                    <Rectangle Width="100" Height="25" Stroke="Black" StrokeThickness="0.5" Fill="{x:Null}" RadiusY="20" RadiusX="20" Margin="0,65,0,0"/>
+                    <Button Width="120" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Margin="0,65,0,0" Content="Not returned" Foreground="DimGray"/>
+                </Grid>
+            </Grid>
+            <Button Grid.Row="2" Content="Completed" Width="150" Height="30" Background="#a2e0d0" BorderBrush="{x:Null}"/>
+        </Grid>
+    </Expander>
+</ListViewItem>

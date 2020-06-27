@@ -1,0 +1,44 @@
+﻿<Grid  x:Class="Library_Management.GUI.frm_AddBook"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Library_Management.GUI"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             mc:Ignorable="d" 
+              d:DesignHeight="23"  Margin="5,1,5,0" Background="WhiteSmoke"
+            Width="600" Height="300">
+    <Image Source="/Resources/bookadd_icon.png" Width="100" Height="100" Margin="0,60,500,140"/>
+    <TextBlock Foreground="DimGray" Text="Adding Book" FontSize="25" Width="150" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="130,50,270,210">
+        <materialDesign:PackIcon Kind="BookPlusMultiple" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="Ten" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Tile" Foreground="DimGray" Text="Book's Tile" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="350,50,50,210">
+        <materialDesign:PackIcon Kind="Feather" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="TacGia_ID" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Authors" Foreground="DimGray" Text="Book's Authors" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="350,110,50,150">
+        <materialDesign:PackIcon Kind="Company" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="NXB_ID" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Publisher" Foreground="DimGray" Text="Book's Publisher" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="130,110,270,150">
+        <materialDesign:PackIcon Kind="BookInformationVariant" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="Book_ID" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="Book's ID" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="350,170,50,90">
+        <materialDesign:PackIcon Kind="Bookshelf" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="ViTri" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Shelf" Foreground="DimGray" Text="Book's Shelf" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="130,170,270,90">
+        <materialDesign:PackIcon Kind="Library" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="TheLoai" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Category" Foreground="DimGray" Text="Book's Category" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="130,230,270,30">
+        <materialDesign:PackIcon Kind="Package" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="SL" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Quantity" Foreground="DimGray" Text="Book's Quantity" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+    </StackPanel>
+    <Button Content="Completed" Foreground="DimGray" Background="{x:Null}" BorderBrush="DimGray" Width="150" Height="40" Margin="380,230,70,30" />
+</Grid>
+
+    
