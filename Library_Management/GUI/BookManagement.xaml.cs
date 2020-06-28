@@ -12,6 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Library_Management.BUS;
+using Library_Management.DTO;
+using MaterialDesignThemes.Wpf;
+using System.Data;
+using Microsoft.Win32;
 
 namespace Library_Management.GUI
 {
@@ -20,9 +25,26 @@ namespace Library_Management.GUI
     /// </summary>
     public partial class BookManagement : UserControl
     {
+        BUS_Book BUS = new BUS_Book();
+        DTO_Book book;
         public BookManagement()
         {
             InitializeComponent();
+            list_Book.ItemsSource = BUS.loadBook().DefaultView;
         }
+        public void loaddata()
+        {
+            list_Book.ItemsSource = BUS.loadBook().DefaultView;
+        }
+        private void Btn_Click_openAddBookForm(object sender, RoutedEventArgs e)
+        {
+            frm_AddBook frm = new frm_AddBook();
+            //listbook.Children.Clear();
+            //listbook.Children.Add(frm);
+            frm.ShowDialog();
+        }
+
+ 
+
     }
 }
