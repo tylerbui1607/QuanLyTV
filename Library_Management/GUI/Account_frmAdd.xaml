@@ -6,60 +6,54 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Library_Management.GUI"
              mc:Ignorable="d" 
-             d:DesignHeight="450" WindowStyle="None" d:DesignWidth="520" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
-    <Grid Grid.Row="1" Margin="5,5,3.6,15" >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0"/>
-        <Grid Background="WhiteSmoke" Margin="0,0,0,0" Grid.RowSpan="3">
-            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,328" Text="Information" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
-            <Image Visibility="Hidden" Source="/Resources/Natsu.png" Width="150" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,60"/>
-            <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,20,0,0">
-                <materialDesign:PackIcon Kind="AddCircleOutline" Width="50" Height="50" />
-            </Button>
-            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,60,87,278">
-                <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="Name" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Name" Foreground="DimGray" Text="Natsu Dragneel" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,110,87,228">
-                <materialDesign:PackIcon Kind="PhoneOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="phone" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Phone number" Foreground="DimGray" Text="0357857086" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,210,87,128">
-                <materialDesign:PackIcon Kind="HomeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="address"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Address" Foreground="DimGray" Text="Fairytail" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,210,335,128">
-                <materialDesign:PackIcon Kind="AccountBadgeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="id" Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="001" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,160,87,178">
-                <materialDesign:PackIcon Kind="EmailOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="mail" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Email" Foreground="DimGray" Text="18521381@gm.uit.edu.vn" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,260,87,78">
-                <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <DatePicker x:Name="NgaySinh" FontWeight="Bold" Foreground="DimGray" Margin="4,2,0,2" Width="159" materialDesign:HintAssist.Hint="Date of Birth" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,260,335,78">
-                <materialDesign:PackIcon Kind="CrownOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="LTV"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Account Type" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,310,335,28">
-                <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <DatePicker x:Name="Nghethan" FontWeight="Bold" Foreground="DimGray" Margin="4,2,0,2" Width="94" materialDesign:HintAssist.Hint="Date Expired" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,160,335,178">
-                <materialDesign:PackIcon Kind="IdentificationCardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="cmnd"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Bottom" />
-            </StackPanel>
-            <Button x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="200,320,87,18" Click="Button_Click">
-                Complete
-            </Button>
-            <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="30,20,0,0"/>
-        </Grid>
+             d:DesignHeight="430" WindowStyle="None" d:DesignWidth="470" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke" >
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,360" Text="Add Reader" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
+        <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0">
+            <materialDesign:PackIcon Kind="AddCircleOutline" Width="50" Height="50" />
+        </Button>
+        <Button Background="{x:Null}" Foreground="DimGray" Padding="0" BorderBrush="DimGray" Width="40" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
+            Close
+        </Button>
+        <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="20,20,0,0"/>
+        <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,60,50,278">
+            <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Name" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Name" Foreground="DimGray" Text="Natsu Dragneel" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,110,50,228">
+            <materialDesign:PackIcon Kind="PhoneOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="phone" Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Phone number" Foreground="DimGray" Text="0357857086" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,210,50,128">
+            <materialDesign:PackIcon Kind="HomeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="address"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Address" Foreground="DimGray" Text="Fairytail" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,210,290,128">
+            <materialDesign:PackIcon Kind="AccountBadgeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="id" Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="001" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,160,50,178">
+            <materialDesign:PackIcon Kind="EmailOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="mail" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Email" Foreground="DimGray" Text="18521381@gm.uit.edu.vn" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,260,50,78">
+            <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <DatePicker x:Name="NgaySinh" FontWeight="Bold" Foreground="DimGray" Margin="4,2,0,2" Width="190" materialDesign:HintAssist.Hint="Date of Birth" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,260,290,78">
+            <materialDesign:PackIcon Kind="CrownOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="LTV"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Account Type" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,310,290,28">
+            <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <DatePicker x:Name="Nghethan" FontWeight="Bold" Foreground="DimGray" Margin="4,2,0,2" Width="120" materialDesign:HintAssist.Hint="Date Expired" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,160,290,178">
+            <materialDesign:PackIcon Kind="IdentificationCardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="cmnd"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Bottom" />
+        </StackPanel>
+        <Button x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="230,320,80,18" Click="Button_Click">
+            Complete
+        </Button>
     </Grid>
 </Window>

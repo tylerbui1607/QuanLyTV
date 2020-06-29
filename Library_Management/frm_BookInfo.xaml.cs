@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library_Management.GUI
+namespace Library_Management
 {
     /// <summary>
-    /// Interaction logic for frm_AddBook.xaml
+    /// Interaction logic for frm_BookInfo.xaml
     /// </summary>
-    public partial class frm_AddBook : Window
+    public partial class frm_BookInfo : Window
     {
-        public frm_AddBook()
+        public frm_BookInfo()
         {
             InitializeComponent();
         }

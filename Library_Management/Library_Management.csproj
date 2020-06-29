@@ -64,6 +64,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="frm_BookInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Account_frmAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +137,9 @@
     <Compile Include="DAL\DBConnect.cs" />
     <Compile Include="DTO\DTO_NhanVien.cs" />
     <Compile Include="DTO\DTO_ThanhVien.cs" />
+    <Compile Include="frm_BookInfo.xaml.cs">
+      <DependentUpon>frm_BookInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Account_frmAdd.xaml.cs">
       <DependentUpon>Account_frmAdd.xaml</DependentUpon>
     </Compile>
@@ -215,25 +222,7 @@
   <ItemGroup>
     <Resource Include="Resources\library.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Sample.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\tile1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\tile2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\tile3.png" />
-  </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Resource Include="Resources\coom1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\coom.png" />
-  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Natsu.png" />
   </ItemGroup>

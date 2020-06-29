@@ -89,7 +89,7 @@ namespace Library_Management.GUI
             openFileDialog.ShowDialog();
             string a = openFileDialog.FileName;
             Img.Source = new BitmapImage(new Uri(@a, UriKind.RelativeOrAbsolute));
-            Btn_Search.Visibility = Visibility.Hidden;
+            //Btn_Search.Visibility = Visibility.Hidden;
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)

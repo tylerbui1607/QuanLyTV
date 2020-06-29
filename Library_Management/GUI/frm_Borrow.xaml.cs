@@ -18,7 +18,7 @@ namespace Library_Management.GUI
     /// <summary>
     /// Interaction logic for frm_Borrow.xaml
     /// </summary>
-    public partial class frm_Borrow : UserControl
+    public partial class frm_Borrow : Window
     {
         public frm_Borrow()
         {
