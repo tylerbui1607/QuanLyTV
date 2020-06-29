@@ -1,0 +1,81 @@
+﻿<Window x:Class="Library_Management.GUI.frm_AddStaff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Library_Management.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" WindowStyle="None" d:DesignWidth="520" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
+    <Grid Grid.Row="1" Margin="0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="WhiteSmoke" Margin="0,0,0,0" >
+            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,328" Text="Information" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,60,275,278">
+                <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox Margin="5,0,0,0" materialDesign:HintAssist.Hint="Name" Foreground="DimGray" Text="Natsu Dragneel" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,110,275,228">
+                <materialDesign:PackIcon Kind="PhoneOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Phone number" Foreground="DimGray" Text="0357857086" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,210,275,128">
+                <materialDesign:PackIcon Kind="HomeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Address" Foreground="DimGray" Text="Fairytail" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="200,210,55,128">
+                <materialDesign:PackIcon Kind="CalendarAccountOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox Margin="5,0,0,0" materialDesign:HintAssist.Hint="Date created" Foreground="DimGray" Text="21/05/2020" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,160,275,178">
+                <materialDesign:PackIcon Kind="EmailOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox Margin="5,0,0,0" materialDesign:HintAssist.Hint="Email" Foreground="DimGray" Text="18521381@gm.uit.edu.vn" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,260,275,78">
+                <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <DatePicker FontWeight="Bold" Foreground="DimGray" Margin="4,0,0,0" Width="190" materialDesign:HintAssist.Hint="Date of Birth" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+            </StackPanel>
+            <StackPanel Visibility="Hidden" Orientation="Horizontal" Height="40" Width="150" Margin="200,260,55,78">
+                <materialDesign:PackIcon Kind="CrownOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Role" Foreground="DimGray" Text="Staff" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Visibility="Visible" Orientation="Horizontal" Height="40" Width="150" Margin="200,260,55,78">
+                <materialDesign:PackIcon Kind="UsersOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Username" Foreground="DimGray" Text="Staff" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="200,60,55,278">
+                <materialDesign:PackIcon Kind="BusinessCardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="18521104" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="200,160,55,178">
+                <materialDesign:PackIcon Kind="CardBulletedOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="SNo23" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="200,110,55,228">
+                <materialDesign:PackIcon Kind="GenderMaleFemale" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox Visibility="Hidden"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Gender" Foreground="DimGray" Text="Male" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="290,130,50,228" Visibility="Visible">
+                <CheckBox Content="Male" />
+                <CheckBox Content="Female" Margin="15,0,0,0"/>
+            </StackPanel>
+            <StackPanel Visibility="Hidden" Orientation="Horizontal" Height="40" Width="150" Margin="200,310,55,28">
+                <materialDesign:PackIcon Kind="StateMachine" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <TextBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Status" Foreground="DimGray" Text="Active" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </StackPanel>
+            <StackPanel Visibility="Visible" Orientation="Horizontal" Height="40" Width="150" Margin="200,310,55,28">
+                <materialDesign:PackIcon Kind="KeyboardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
+                <PasswordBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Password" Foreground="DimGray"  FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+            </StackPanel>
+            <Button Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="55,320,310,18">
+                Complete
+            </Button>
+            <Button Background="{x:Null}" Visibility="Hidden" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="55,320,310,18">
+                Change
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

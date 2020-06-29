@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace Library_Management.GUI
 {
     /// <summary>
-    /// Interaction logic for frmAddBook.xaml
+    /// Interaction logic for frm_BorrowManagement.xaml
     /// </summary>
-    public partial class frmAddBook : Grid
+    public partial class frm_BorrowManagement : UserControl
     {
-        public frmAddBook()
+        public frm_BorrowManagement()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

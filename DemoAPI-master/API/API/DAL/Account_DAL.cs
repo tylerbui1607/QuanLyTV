@@ -10,7 +10,7 @@ namespace API.DAL
 {
     public class NhanVien_DAL
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-PS7MU4U\\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=QLTV;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter adp = null;
         public bool Login(NhanVien NhanVien)

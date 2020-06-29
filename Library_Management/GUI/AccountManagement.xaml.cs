@@ -59,22 +59,15 @@ namespace Library_Management.GUI
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (IDTV.Text == null)
+            if (BUS.xoaThanhVien(Convert.ToInt32(IDTV.Text)))
             {
-                MessageBox.Show("Vui long nhap ID");
+                MessageBox.Show("Xoa thanh cong");
             }
             else
             {
-                if (BUS.xoaThanhVien(Convert.ToInt32(IDTV.Text)))
-                {
-                    MessageBox.Show("Xoa thanh cong");
-                }
-                else
-                {
-                    MessageBox.Show("Xoa that bai hoac thanh vien khong ton tai");
-                }
-                ListAccount.ItemsSource = BUS.GetThanhVien().DefaultView;
+                MessageBox.Show("Xoa that bai hoac thanh vien khong ton tai");
             }
+            ListAccount.ItemsSource = BUS.GetThanhVien().DefaultView;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -87,7 +80,7 @@ namespace Library_Management.GUI
             IDLTV.IsEnabled = true;
             address.IsEnabled = true;
             Complete.Visibility = Visibility.Visible;
-            TurnBack.Visibility = Visibility.Visible;
+
         }
         private void Btn_AddImg_Click(object sender, RoutedEventArgs e)
         {
@@ -104,29 +97,9 @@ namespace Library_Management.GUI
 
         }
 
-        private void Button_Complete(object sender, RoutedEventArgs e)
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-           try
-            {
-                tv = new DTO_ThanhVien(
-                IDTV.Text,
-                name.Text,
-                address.Text,
-                phone.Text,
-                cmnd.Text,
-                System.DateTime.Now,
-                DateExpired.SelectedDate.Value,
-                DOB.SelectedDate.Value,
-                IDLTV.Text, email.Text,
-                Img.Source.ToString(),
-                "Nam");
-               
-            }
-           catch(Exception a)
-            {          
-                MessageBox.Show("Vui Long dien day du thong tin ");
-                return;
-            }
+            tv = new DTO_ThanhVien(IDTV.Text, name.Text, address.Text, phone.Text, cmnd.Text, System.DateTime.Now, DateExpired.SelectedDate.Value, DOB.SelectedDate.Value, IDLTV.Text, email.Text, Img.Source.ToString(), "Nam");
             BUS.suaThanhVien(tv);
             ListAccount.ItemsSource = BUS.GetThanhVien().DefaultView;
             DOB.IsEnabled = false;
@@ -137,25 +110,11 @@ namespace Library_Management.GUI
             IDLTV.IsEnabled = false;
             address.IsEnabled = false;
             Complete.Visibility = Visibility.Hidden;
-            TurnBack.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             ListAccount.ItemsSource = BUS.GetThanhVien().DefaultView;
-        }
-
-        private void Button_TurnBack(object sender, RoutedEventArgs e)
-        {
-            DOB.IsEnabled = false;
-            DateExpired.IsEnabled = false;
-            name.IsEnabled = false;
-            email.IsEnabled = false;
-            phone.IsEnabled = false;
-            IDLTV.IsEnabled = false;
-            address.IsEnabled = false;
-            Complete.Visibility = Visibility.Hidden;
-            TurnBack.Visibility = Visibility.Hidden;
         }
     }
 }

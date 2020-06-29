@@ -43,15 +43,9 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -90,7 +84,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\frmAddBook.xaml">
+    <Page Include="GUI\frm_AddBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_AddStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_BookReturn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_Borrow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_BorrowItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_BorrowList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_BorrowManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\frm_Management.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,8 +152,29 @@
     <Compile Include="GUI\DashBoard.xaml.cs">
       <DependentUpon>DashBoard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmAddBook.xaml.cs">
-      <DependentUpon>frmAddBook.xaml</DependentUpon>
+    <Compile Include="GUI\frm_AddBook.xaml.cs">
+      <DependentUpon>frm_AddBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_AddStaff.xaml.cs">
+      <DependentUpon>frm_AddStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_BookReturn.xaml.cs">
+      <DependentUpon>frm_BookReturn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_Borrow.xaml.cs">
+      <DependentUpon>frm_Borrow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_BorrowItem.xaml.cs">
+      <DependentUpon>frm_BorrowItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_BorrowList.xaml.cs">
+      <DependentUpon>frm_BorrowList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_BorrowManagement.xaml.cs">
+      <DependentUpon>frm_BorrowManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_Management.xaml.cs">
+      <DependentUpon>frm_Management.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -161,7 +204,6 @@
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="GUI\packages.config" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

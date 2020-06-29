@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library_Management
+namespace Library_Management.GUI
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for frm_Borrow.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class frm_Borrow : UserControl
     {
-        public UserControl1()
+        public frm_Borrow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

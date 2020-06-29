@@ -6,22 +6,18 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Library_Management.GUI"
              mc:Ignorable="d" 
-            Height="auto" Width="458.8" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
-    <!--<Grid.RowDefinitions>
-        <RowDefinition Height="15"/>
-        <RowDefinition Height="auto"/>
-   </Grid.RowDefinitions>-->
-    <Grid Grid.Row="1" Margin="5,5,3.8,21.6" >
+             d:DesignHeight="450" WindowStyle="None" d:DesignWidth="520" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
+    <Grid Grid.Row="1" Margin="5,5,3.6,15" >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="18*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0"/>
-        <Grid Background="WhiteSmoke" Margin="0,0,-39,-12.8" Grid.RowSpan="3" Height="492" VerticalAlignment="Top">
+        <Grid Background="WhiteSmoke" Margin="0,0,0,0" Grid.RowSpan="3">
             <TextBlock HorizontalAlignment="Center" Margin="0,10,0,328" Text="Information" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
             <Image Visibility="Hidden" Source="/Resources/Natsu.png" Width="150" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,60"/>
-            <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0">
+            <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,20,0,0">
                 <materialDesign:PackIcon Kind="AddCircleOutline" Width="50" Height="50" />
             </Button>
             <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="200,60,87,278">
@@ -60,15 +56,10 @@
                 <materialDesign:PackIcon Kind="IdentificationCardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
                 <TextBox x:Name="cmnd"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Bottom" />
             </StackPanel>
-            <Button x:Name="Complete" Background="#FF70D6FC"  Foreground="DimGray" BorderBrush="#FF020101" Height="Auto" Margin="72,413,292,34" Click="Button_Click" FontWeight="SemiBold">
+            <Button x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="200,320,87,18" Click="Button_Click">
                 Complete
             </Button>
-            <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="10,60,0,0"/>
-            <Button x:Name="Add" Background="#FF59F96C" Foreground="DimGray" BorderBrush="DimGray" Height="Auto" Margin="10,15,404,450" Click="Button_Click" Content="OK"/>
-            <Button x:Name="Deny" Background="#FFFF5959" Foreground="DimGray" BorderBrush="DimGray" Height="Auto" Margin="89,15,318,450" Click="Button_Click" Content="Reset"/>
-            <Button x:Name="Turn_Back" Background="#FF70D6FC"  Foreground="DimGray" BorderBrush="#FF020101" Height="Auto" Margin="227,414,134,34" Click="Button_Click" FontWeight="SemiBold" Content="Turn Back"/>
-            <RadioButton Content="Male" HorizontalAlignment="Left" Margin="210,383,0,0" VerticalAlignment="Top" Background="#FF673AB7" FontWeight="Bold" BorderBrush="#FF673AB7"/>
-            <RadioButton x:Name="Femvle" Content="Female" HorizontalAlignment="Left" Margin="318,383,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="30,20,0,0"/>
         </Grid>
     </Grid>
 </Window>
