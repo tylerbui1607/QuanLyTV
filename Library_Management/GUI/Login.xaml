@@ -13,10 +13,10 @@
         mc:Ignorable="d"
         Title="Login" Height="350" Width="570" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="{x:Null}" AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Grid>
-        <Grid Width="280" Height="350" Background="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Right">
+        <Grid Width="570" Height="350" Background="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Border CornerRadius="8,8,8,8">
                 <Border.Background>
-                    <ImageBrush Stretch="Fill" ImageSource="/Resources/login2.jpg"/>
+                    <ImageBrush Stretch="Fill" ImageSource="/Resources/login.jpg"/>
                 </Border.Background>
             </Border>
         </Grid>
