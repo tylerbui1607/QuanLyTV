@@ -22,7 +22,7 @@ namespace Library_Management
     {
         GUI.DashBoard dashBoard = new GUI.DashBoard();
         GUI.BookManagement bookManagement = new GUI.BookManagement();
-        
+        GUI.frm_BorrowManagement borrowManagement = new GUI.frm_BorrowManagement();
         GUI.AccountManagement accountManagement = new GUI.AccountManagement();
         GUI.Login login = new GUI.Login();
         public MainWindow()
@@ -69,6 +69,9 @@ namespace Library_Management
                     break;
                 case 3:
                     MainGrid.Children.Add(accountManagement);
+                    break;
+                case 2:
+                    MainGrid.Children.Add(borrowManagement);
                     break;
             }
            

@@ -18,6 +18,14 @@ namespace Library_Management.DAL
             adapt.Fill(DSThanhVien);
             return DSThanhVien;
         }
+        public DataTable GetTVtheoID(string id)
+        {
+            string query = "SELECT * FROM THANH_VIEN WHERE IDTV ="+id;
+            SqlDataAdapter adapt = new SqlDataAdapter(query, connection);
+            DataTable DSThanhVien = new DataTable();
+            adapt.Fill(DSThanhVien);
+            return DSThanhVien;
+        }
         /*Them Thanh Vien*/
         public bool AddTV(DTO.DTO_ThanhVien TV)
         {
