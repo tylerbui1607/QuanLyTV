@@ -27,6 +27,7 @@ namespace Library_Management.GUI
     {
         BUS_Book BUS = new BUS_Book();
         DTO_Book book;
+        public bool AllowFiltering { get; set; }
         public BookManagement()
         {
             InitializeComponent();
@@ -42,9 +43,16 @@ namespace Library_Management.GUI
             //listbook.Children.Clear();
             //listbook.Children.Add(frm);
             frm.ShowDialog();
+            list_Book.ItemsSource = BUS.loadBook().DefaultView;
         }
-
- 
-
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (search.Text != "")
+            {
+                list_Book.ItemsSource = BUS.searchBook(search.Text).DefaultView;
+            }
+            else
+                list_Book.ItemsSource = BUS.loadBook().DefaultView;
+        }
     }
 }

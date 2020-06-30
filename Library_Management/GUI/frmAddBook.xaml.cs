@@ -19,17 +19,14 @@ namespace Library_Management.GUI
         }
         private void Button_Complete_Click(object sender, RoutedEventArgs e)
         {
-            //thieu so Gia sach
             try
             {
-
-
                 dto = new DTO_Book(Book_ID.Text, TacGia_ID.Text, NXB_ID.Text, Ten.Text, TheLoai.Text, ViTri.Text, int.Parse(SL.Text), int.Parse(SL.Text), float.Parse(Price.Text));
 
                 if (bus.themBook(dto))
                 {
                     MessageBox.Show("Thêm sách thành công");
-                    //load book
+                    this.Close();
                 }
                 else
                 {
@@ -44,7 +41,6 @@ namespace Library_Management.GUI
         private void Button_TurnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            //load book
         }
 
     }

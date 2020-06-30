@@ -15,9 +15,9 @@
         </Grid.RowDefinitions>
         <StackPanel  Grid.Row="0" Orientation="Horizontal" >
             <TextBlock Text="Book Management" FontWeight="Bold" FontFamily="Cooper" FontSize="20" Foreground="DimGray" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox FontWeight="Bold" Foreground="DimGray" FontSize="13"
-             materialDesign:HintAssist.Hint="Name Search" VerticalAlignment="Center" Width="150" Margin="190,0,5,0"/>
-            <ComboBox FontWeight="Bold" FontSize="13" Foreground="DimGray" HorizontalAlignment="Right" Margin="5,8,5,0" Padding="0" Width="130"
+            <TextBox x:Name="search" FontWeight="Bold" Foreground="DimGray" FontSize="13"
+             materialDesign:HintAssist.Hint="Name Search" VerticalAlignment="Center" Width="150" Margin="190,0,5,0" TextChanged="TextBox_TextChanged"/>
+            <ComboBox x:Name="category" FontWeight="Bold" FontSize="13" Foreground="DimGray" HorizontalAlignment="Right" Margin="5,8,5,0" Padding="0" Width="130"
                 materialDesign:HintAssist.Hint="Category"
                 IsEditable="True">
                 <ComboBoxItem FontWeight="Light">

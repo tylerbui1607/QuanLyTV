@@ -19,6 +19,15 @@ namespace Library_Management.DAL
             adapt.Fill(DSBook);
             return DSBook;
         }
+        //Search
+        public DataTable SearchBook(string str)
+        {
+            string query = "SELECT * FROM SACH WHERE Ten like " + "'%"+str+ "%'";
+            SqlDataAdapter adapt = new SqlDataAdapter(query, connection);
+            DataTable DSBook = new DataTable();
+            adapt.Fill(DSBook);
+            return DSBook;
+        }
         /*Them Sach*/
         public bool AddBook(DTO_Book book)
         {

@@ -15,6 +15,10 @@ namespace Library_Management.BUS
         {
             return dalBook.GetBook();
         }
+        public DataTable searchBook(string str)
+        {
+            return dalBook.SearchBook(str);
+        }
         public bool themBook(DTO_Book Book)
         {
             return dalBook.AddBook(Book);
