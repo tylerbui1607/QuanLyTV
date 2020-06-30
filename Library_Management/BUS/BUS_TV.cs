@@ -16,6 +16,10 @@ namespace Library_Management.BUS
         {
             return dalThanhVien.GetTV();
         }
+        public DataTable GetThanhVienTheoID(string id)
+        {
+            return dalThanhVien.GetTVtheoID(id);
+        }
         public bool themThanhVien(DTO_ThanhVien tv)
         {
             return dalThanhVien.AddTV(tv);

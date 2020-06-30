@@ -17,8 +17,8 @@
                 </Grid.RowDefinitions>
                 <StackPanel  Grid.Row="0" Orientation="Horizontal" >
                     <TextBlock Text=" Issue and Return" FontWeight="Bold" FontFamily="Arial" FontSize="20" Foreground="DimGray" Margin="15,10,10,10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox FontWeight="Bold" Foreground="DimGray" FontSize="13" materialDesign:HintAssist.Hint="Name,ID Search" VerticalAlignment="Center" Width="140" Margin="390,5,5,0" />
-                    <Button Background="WhiteSmoke" Foreground="DimGray" BorderBrush="{x:Null}" Width="55" Margin="5,5,5,0" Height="25" Padding="0">
+                    <TextBox x:Name="idseach" FontWeight="Bold" Foreground="DimGray" FontSize="13" materialDesign:HintAssist.Hint="ID Search" VerticalAlignment="Center" Width="140" Margin="390,5,5,0" />
+                    <Button Background="WhiteSmoke" Foreground="DimGray" BorderBrush="{x:Null}" Width="55" Margin="5,5,5,0" Height="25" Padding="0" Click="Button_Click">
                         <materialDesign:PackIcon Kind="Search" Width="25" Height="25"/>
                     </Button>
                 </StackPanel>
@@ -39,22 +39,22 @@
                                 <Button Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="30">
                                     <materialDesign:PackIcon Kind="AccountOutline" Foreground="DimGray" Width="20" Height="20"/>
                                 </Button>
-                                <TextBlock Margin="0,3,0,0" Foreground="DimGray" Height="20" Text="Natsu Dragneel" FontSize="13" FontWeight="Bold"/>
+                                <TextBlock x:Name="tlbname" Margin="0,3,0,0" Foreground="DimGray" Height="20" FontSize="13" FontWeight="Bold"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="20,5,0,0">
                                 <Button Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Width="30">
                                     <materialDesign:PackIcon Kind="AccountBadgeOutline" Foreground="DimGray" Width="20" Height="20"/>
                                 </Button>
-                                <TextBlock Margin="0" Foreground="DimGray" Height="20" Text="18521381" FontSize="13" FontWeight="Bold"/>
+                                <TextBlock x:Name="tlbid" Margin="0" Foreground="DimGray" Height="20" FontSize="13" FontWeight="Bold"/>
                             </StackPanel>
                             <Button Padding="0" Margin="30,10,25,20" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" BorderThickness="0.5" Width="145" Height="30">
                                 Loan Book
                             </Button>
                         </StackPanel>
                     </Grid>
-                    <Grid Grid.Column="1" x:Name="CallCardView">
+                    <ListView Grid.Column="1" x:Name="CallCardView">
 
-                    </Grid>
+                    </ListView>
                 </Grid>
             </Grid>
 
