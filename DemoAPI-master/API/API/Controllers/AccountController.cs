@@ -1,5 +1,5 @@
 ﻿using API.BUS;
-using API.Model;
+using API.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
@@ -18,14 +18,10 @@ namespace API.Controllers
         [HttpGet]
         public DataTable Get()
         {
-            Account_BUS account_BUS = new Account_BUS();
+            NhanVien_Bus account_BUS = new NhanVien_Bus();
             return account_BUS.GetAllAccount();
         }
-        [HttpPost]
-        public bool Login([FromBody] NhanVien account)
-        {
-            Account_BUS account_BUS = new Account_BUS();
-            return account_BUS.Login(account);
-        }
+      
+      
     }
 }

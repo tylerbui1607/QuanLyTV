@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Net.Http;
+using System.Net;
+using Library_Management.DTO;
 namespace Library_Management.GUI
 {
     /// <summary>
@@ -31,25 +33,31 @@ namespace Library_Management.GUI
             Login_Result = -1;
             this.Close();
         }
-        public void Logincheck()
+        private async Task<bool> Login321()
         {
+            bool str = false;
 
-            if (Login_Result == 2)
-                MessageBox.Show("Dang nhap thanh cong");
-           
-          
-        }
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            DAL.DAL_LOGIN logincheck = new DAL.DAL_LOGIN();
-            if (logincheck.CheckLogin(username.Text, pass.Password))
+            HttpClient client = new HttpClient();
+
+            DTO_NhanVien account = new DTO_NhanVien { UserName_NV = username.Text, PassWord_NV = pass.Password };
+            var response = client.PostAsJsonAsync("https://localhost:5001/login/", account).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                str = await response.Content.ReadAsAsync<bool>();
+            }
+
+            if (str)
             {
                 Login_Result = 1;
                 this.Close();
             }
-        
-             else
+            else
                 MessageBox.Show("Incorrect password or username!");
+            return true;
+        }
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login321();
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

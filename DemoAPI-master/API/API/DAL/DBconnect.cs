@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace Library_Management.DAL
+namespace API.DAL
 {
-    class DBConnect
+    public class DBConnect
     {
         protected
-            SqlConnection connection = new SqlConnection("Data Source = DESKTOP - PS7MU4U\\SQLEXPRESS; Initial Catalog = QLTV; Integrated Security = True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-PS7MU4U\\SQLEXPRESS; Initial Catalog = QLTV; Integrated Security = True");
     }
 
 }

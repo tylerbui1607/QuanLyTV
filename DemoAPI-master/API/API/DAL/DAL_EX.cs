@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-namespace Library_Management.DAL
+namespace API.DAL
 {
     class DAL_EX : DBConnect
     {
