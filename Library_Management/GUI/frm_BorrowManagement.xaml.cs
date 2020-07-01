@@ -25,11 +25,10 @@ namespace Library_Management.GUI
     public partial class frm_BorrowManagement : UserControl
     {
         BUS_TV BUSTV = new BUS_TV();
-        DTO_ThanhVien tv;
         BUS_PM BUSPM = new BUS_PM();
-        DTO_PHIEUMUON pm;
         BUS_CTM BUSCTM = new BUS_CTM();
-        DTO_CTMUON ctm;
+        BUS_Book BUSBOOK = new BUS_Book();
+        BUS_PT BUSPT = new BUS_PT();
         public frm_BorrowManagement()
         {
             InitializeComponent();
@@ -43,6 +42,7 @@ namespace Library_Management.GUI
             }
             else
             {
+                CallCardView.Items.Clear();
                 foreach (DataRow row in BUSTV.GetThanhVienTheoID(idseach.Text).Rows)
                 {
                     if (row != null)
@@ -62,24 +62,43 @@ namespace Library_Management.GUI
                                 {
                                     tam = "Returned";
                                     item.btncomple.Visibility = Visibility.Hidden;
+                                    foreach (DataRow row4 in BUSPT.GetPT(row1["IDPM"].ToString()).Rows)
+                                    {
+                                        DateTime ngaytra;
+                                        ngaytra = DateTime.Parse(row4["NgayTra"].ToString());
+                                        item.Fine.Text = row4["TienPhat"].ToString();
+                                        TimeSpan interval = ngaytra.Subtract(ngaytam);
+                                        item.Overdue.Text = interval.TotalDays.ToString();
+                                    }
+                                    //item.IsEnabled = false;
                                 }
                                 else
                                 {
                                     tam = "Not returned";
                                 }
+                                item.idtv.Text = row["IDTV"].ToString();
+                                item.idpm.Text = row1["IDPM"].ToString();
                                 item.btntam.Content = tam;
-                                item.datebor.Text = "Date borrow : " + ngaytam.ToShortDateString();
-                                item.EXpan.Header = "ID: " + row1["IDPM"] + "\t\t\t" + ngaytam.ToShortDateString() + "\t\tStatus: " + tam;
+                                item.datebor.Text = ngaytam.ToShortDateString();
+                                item.EXpan.Header = "ID: " + row1["IDPM"].ToString() + "\t\t\t" + ngaytam.ToShortDateString() + "\t\tStatus: " + tam;
                                 foreach (DataRow row2 in BUSCTM.GetCTM(row1["IDPM"].ToString()).Rows)
                                 {
-                                    if(row2 != null)
+                                    if (row2 != null)
                                     {
                                         frm_BorrowLvItem stack = new frm_BorrowLvItem();
-                                        stack.nabook.Text = row2["IDPM"].ToString();//đổi thành tên sách
-                                        stack.idbook.Text = "ID: " + row2["IDSach"].ToString();
-                                        stack.slbook.Text = "SL: " + row2["SL"].ToString();
+                                        foreach (DataRow row3 in BUSBOOK.GetBookWithID(row2["IDSach"].ToString()).Rows)
+                                        {
+                                            stack.nabook.Text = row3["Ten"].ToString();
+                                        }           
+                                        stack.idbook.Text = row2["IDSach"].ToString();
+                                        stack.slbook.Text = row2["SL"].ToString();
+                                        stack.slbook.IsReadOnly = true;
+                                        if (tam == "Returned")
+                                            stack.checkbook.IsEnabled = false;
                                         if (row2["checktra"].ToString() == "1")
+                                        {
                                             stack.checkbook.IsChecked = true;
+                                        }
                                         else
                                             stack.checkbook.IsChecked = false;
                                         item.LstView.Items.Add(stack);
@@ -90,6 +109,15 @@ namespace Library_Management.GUI
                         }
                     }
                 }
+            }
+        }
+
+        private void BtnLoadbook(object sender, RoutedEventArgs e)
+        {
+            if (tlbname.Text != "")
+            {
+                frm_Borrow frm = new frm_Borrow(tlbid.Text);
+                frm.ShowDialog();
             }
         }
     }

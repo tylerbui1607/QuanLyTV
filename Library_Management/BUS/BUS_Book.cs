@@ -28,6 +28,17 @@ namespace Library_Management.BUS
         {
             return dalBook.UpdateBook(Book);
         }
-
+        public DataTable GetBookWithID(string id)
+        {
+            return dalBook.GetBookWithID(id);
+        }
+        public DataTable GetBook()
+        {
+            return dalBook.GetBookVer2();
+        }
+        public DataTable searchBookVer2(string str)
+        {
+            return dalBook.SearchBookVer2(str);
+        }
     }
 }

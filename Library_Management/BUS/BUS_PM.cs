@@ -17,6 +17,14 @@ namespace Library_Management.BUS
         {
             return dalphieumuon.GetPM(idtv);
         }
+        public int GetNewPM()
+        {
+            return dalphieumuon.GetNewPM();
+        }
+        public bool addPM(DTO_PHIEUMUON pm)
+        {
+            return dalphieumuon.AddPM(pm);
+        }
         public bool suaPM(DTO_PHIEUMUON pm)
         {
             return dalphieumuon.suaPM(pm);

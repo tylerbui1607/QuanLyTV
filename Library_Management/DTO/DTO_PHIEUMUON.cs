@@ -25,7 +25,18 @@ namespace Library_Management.DTO
         {
 
         }
-
+        public DTO_PHIEUMUON(string idtv, string idnv, DateTime NgayMuon, string tra)
+        {
+            this.ID_TV = idtv;
+            this.ID_NV = idnv;
+            this.NgayMuon = NgayMuon;
+            this.Tra = tra;
+        }
+        public DTO_PHIEUMUON(string idpm,string tra)
+        {
+            this.ID_PM = idpm;
+            this.Tra = tra;
+        }
         public DTO_PHIEUMUON(string idpm,string idtv, string idnv, DateTime NgayMuon, string tra)
         {
             this.ID_PM = idpm;

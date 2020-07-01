@@ -19,9 +19,24 @@ namespace Library_Management.DAL
             return DSCTM;
         }
 
-        //public bool AddPM(DTO.DTO_PHIEUMUON PM)
-        //{
-
-        //}
+        public bool AddCTM(DTO.DTO_CTMUON CTM)
+        {
+            string SQL = "EXEC USP_INSERT_CTM @IDPM , @IDSach , @SL , @checktra";
+            return DAL_EX.Instance.ExcuteReader(SQL, new object[] {CTM.IDPM,
+                                                                   CTM.IDSACH,
+                                                                   CTM.SL,
+                                                                   CTM.CHECKTRA
+                                                                        });
+        }
+        public bool suaCTM(DTO.DTO_CTMUON CTM)
+        {
+            string SQL = "USP_UPDATE_CTM @IDPM , @IDSach , @SL , @checktra";
+            return DAL_EX.Instance.ExcuteReader(SQL, new object[] {
+                   CTM.IDPM,
+                   CTM.IDSACH,
+                   CTM.SL,
+                   CTM.CHECKTRA
+            });
+        }
     }
 }

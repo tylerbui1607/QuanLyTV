@@ -17,5 +17,13 @@ namespace Library_Management.BUS
         {
             return dalctmuon.GetCTM(idpm);
         }
+        public bool addCTM(DTO_CTMUON ctm)
+        {
+            return dalctmuon.AddCTM(ctm);
+        }
+        public bool suaCTM(DTO_CTMUON ctm)
+        {
+            return dalctmuon.suaCTM(ctm);
+        }
     }
 }
