@@ -40,8 +40,6 @@ namespace Library_Management.GUI
         private void Btn_Click_openAddBookForm(object sender, RoutedEventArgs e)
         {
             frm_AddBook frm = new frm_AddBook();
-            //listbook.Children.Clear();
-            //listbook.Children.Add(frm);
             frm.ShowDialog();
             list_Book.ItemsSource = BUS.loadBook().DefaultView;
         }

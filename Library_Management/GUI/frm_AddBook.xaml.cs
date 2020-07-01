@@ -11,11 +11,8 @@ namespace Library_Management.GUI
     /// </summary>
     public partial class frm_AddBook : Window
     {
-<<<<<<< HEAD:Library_Management/GUI/frm_AddBook.xaml.cs
-=======
         BUS_Book bus = new BUS_Book();
         DTO_Book dto;
->>>>>>> book:Library_Management/GUI/frmAddBook.xaml.cs
         public frm_AddBook()
         {
             InitializeComponent();
