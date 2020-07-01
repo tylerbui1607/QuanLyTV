@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Library_Management.BUS;
+using Library_Management.DTO;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Library_Management.GUI
 {
@@ -20,9 +11,37 @@ namespace Library_Management.GUI
     /// </summary>
     public partial class frm_AddBook : Window
     {
+        BUS_Book bus = new BUS_Book();
+        DTO_Book dto;
         public frm_AddBook()
         {
             InitializeComponent();
         }
+        private void Button_Complete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dto = new DTO_Book(Book_ID.Text, TacGia_ID.Text, NXB_ID.Text, Ten.Text, TheLoai.Text, ViTri.Text, int.Parse(SL.Text), int.Parse(SL.Text), float.Parse(Price.Text));
+
+                if (bus.themBook(dto))
+                {
+                    MessageBox.Show("Thêm sách thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sách thất bại");
+                }
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show("Vui long dien day du thong tin");
+            }
+        }
+        private void Button_TurnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
