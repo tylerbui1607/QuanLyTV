@@ -47,7 +47,7 @@
                                 </Button>
                                 <TextBlock x:Name="tlbid" Margin="0" Foreground="DimGray" Height="20" FontSize="13" FontWeight="Bold"/>
                             </StackPanel>
-                            <Button Padding="0" Margin="30,10,25,20" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" BorderThickness="0.5" Width="145" Height="30">
+                            <Button Padding="0" Margin="30,10,25,20" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" BorderThickness="0.5" Width="145" Height="30" Click="BtnLoadbook">
                                 Loan Book
                             </Button>
                         </StackPanel>

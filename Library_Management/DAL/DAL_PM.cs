@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.Common;
 
 namespace Library_Management.DAL
 {
@@ -19,19 +20,49 @@ namespace Library_Management.DAL
             return DSPM;
         }
 
-        //public bool AddPM(DTO.DTO_PHIEUMUON PM)
-        //{
+        public int GetNewPM()
+        {
+            int idpm = 0;
+            connection.Open();
+            string query = "select max(IDPM) from PHIEU_MUON ";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        if (Convert.IsDBNull(reader.GetValue(0)) == true)
+                        {
+                            idpm = 0;
+                        }
+                        else
+                        {
+                            idpm = Convert.ToInt32(reader.GetValue(0));
+                        }
+                    }
+                    reader.Close();
+                }
+            }
+            connection.Close();
+            return idpm;    
+        }
 
-        //}
+        public bool AddPM(DTO.DTO_PHIEUMUON PM)
+        {
+            string SQL = "EXEC USP_INSERT_PM @IDTV , @IDNV , @NgayMuon , @Tra";
+            return DAL_EX.Instance.ExcuteReader(SQL, new object[] {PM.ID_TV,
+                                                                   PM.ID_NV,
+                                                                   PM.NgayMuon,
+                                                                   PM.Tra
+            });
+        }
 
         public bool suaPM(DTO.DTO_PHIEUMUON PM)
         {
-            string SQL = "USP_UPDATE_PM @IDPM , @idtv , @idnv , @ngaymuon , @tra";
+            string SQL = "USP_UPDATE_PM @IDPM , @Tra";
             return DAL_EX.Instance.ExcuteReader(SQL, new object[] {
                    PM.ID_PM,
-                   PM.ID_TV,
-                   PM.ID_NV,
-                   PM.NgayMuon,
                    PM.Tra
             });
         }

@@ -63,7 +63,30 @@ namespace Library_Management.DAL
             });
         }
 
+        public DataTable GetBookWithID(string id)
+        {
+            string query = "SELECT * FROM SACH WHERE IDSach ="+id;
+            SqlDataAdapter adapt = new SqlDataAdapter(query, connection);
+            DataTable DSBook = new DataTable();
+            adapt.Fill(DSBook);
+            return DSBook;
+        }
 
-
+        public DataTable GetBookVer2()
+        {
+            string query = "SELECT IDSach,Ten FROM SACH ";
+            SqlDataAdapter adapt = new SqlDataAdapter(query, connection);
+            DataTable DSBook = new DataTable();
+            adapt.Fill(DSBook);
+            return DSBook;
+        }
+        public DataTable SearchBookVer2(string str)
+        {
+            string query = "SELECT IDSach,Ten FROM SACH WHERE Ten like " + "'%" + str + "%'";
+            SqlDataAdapter adapt = new SqlDataAdapter(query, connection);
+            DataTable DSBook = new DataTable();
+            adapt.Fill(DSBook);
+            return DSBook;
+        }
     }
 }

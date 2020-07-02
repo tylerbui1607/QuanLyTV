@@ -8,8 +8,10 @@
              Height="20" Padding="0" Background="WhiteSmoke" >
     <StackPanel Orientation="Horizontal">
         <TextBlock x:Name="nabook" Width="130" Text=" Clean Code"/>
-        <TextBlock x:Name="idbook" Width="100" Text="ID: 0034A" TextAlignment="Center"/>
-        <TextBlock x:Name="slbook" Width="50" Text="SL: 1" TextAlignment="Center"/>
+        <TextBlock Width="20" Text="ID:" TextAlignment="Center"/>
+        <TextBlock x:Name="idbook" Width="40" Text="0034A" TextAlignment="Left"/>
+        <TextBlock Width="20" Text="SL:" TextAlignment="Center"/>
+        <TextBox x:Name="slbook" Width="20" Text="1" TextAlignment="Left" Height="27" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <CheckBox x:Name="checkbook" Padding="0" VerticalAlignment="Bottom" Background="#9c958e" Margin="15,0,0,0" />
     </StackPanel>
 </ListViewItem>

@@ -13,6 +13,8 @@
                 <RowDefinition Height="35"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Call Card" FontWeight="Bold" FontSize="13" Width="150" Height="30" TextAlignment="Center"/>
+            <TextBlock x:Name="idtv" Visibility="Hidden" Grid.Row="0" FontWeight="Bold" FontSize="13" Width="10" Height="10" TextAlignment="Left" Margin="10,10,570,10"/>
+            <TextBlock x:Name="idpm" Visibility="Hidden" Grid.Row="0" FontWeight="Bold" FontSize="13" Width="10" Height="10" TextAlignment="Left" Margin="10,10,570,10"/>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -25,14 +27,17 @@
                 <ListView Grid.Column="1" x:Name="LstView" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
                 </ListView>
                 <Grid Grid.Column="2" MinHeight="90">
-                    <TextBlock x:Name="datebor" Text="  Date borrow : 24/07/2020" FontSize="13" />
-                    <TextBlock x:Name="Overdue" Text="Overdue : " FontSize="13"  Margin="0,21,0,0"/>
-                    <TextBlock x:Name="Fine" Text="Fine : " FontSize="13"  Margin="0,42,0,0"/>
+                    <TextBlock Text="Date borrow :" FontSize="13" />
+                    <TextBlock x:Name="datebor" Text=" 24/07/2020" FontSize="13" TextAlignment="Right" Margin="0,0,20,0" />
+                    <TextBlock Text="Overdue : " FontSize="13"  Margin="0,21,0,0"/>
+                    <TextBlock x:Name="Overdue" FontSize="13"  Margin="0,21,20,0" TextAlignment="Right"/>
+                    <TextBlock Text="Fine : " FontSize="13"  Margin="0,42,0,0"/>
+                    <TextBlock x:Name="Fine" FontSize="13"  Margin="0,42,20,0" TextAlignment="Right"/>
                     <Rectangle Width="100" Height="25" Stroke="Black" StrokeThickness="0.5" Fill="{x:Null}" RadiusY="20" RadiusX="20" Margin="0,65,0,0"/>
                     <Button  x:Name="btntam" Width="120" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Margin="0,65,0,0" Content="Not returned" Foreground="DimGray"/>
                 </Grid>
             </Grid>
-            <Button x:Name="btncomple" Grid.Row="2" Content="Completed" Width="150" Height="30" Background="#a2e0d0" BorderBrush="{x:Null}"/>
+            <Button x:Name="btncomple" Grid.Row="2" Content="Completed" Width="150" Height="30" Background="#a2e0d0" BorderBrush="{x:Null}" Click="btncomple_Click"/>
         </Grid>
     </Expander>
 </UserControl>
