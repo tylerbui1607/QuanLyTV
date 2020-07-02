@@ -6,16 +6,18 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Library_Management.GUI"
              mc:Ignorable="d" 
-             d:DesignHeight="430" WindowStyle="None" d:DesignWidth="470" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
+            Height="430" Width="480" WindowStyle="None" d:DesignWidth="470" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
     <Grid Background="WhiteSmoke" >
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,360" Text="Add Reader" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
-        <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0">
+        <Button x:Name="Btn_Search" Click="Btn_Search_Click" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,40,0,0">
             <materialDesign:PackIcon Kind="AddCircleOutline" Width="50" Height="50" />
         </Button>
-        <Button Background="{x:Null}" Foreground="DimGray" Padding="0" BorderBrush="DimGray" Width="40" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0">
+        <Button Background="{x:Null}" Foreground="DimGray" Padding="0" BorderBrush="DimGray" Width="40" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Click="Button_Click_Close">
             Close
         </Button>
-        <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="20,20,0,0"/>
+        <Button x:Name="Confirm" Width="55" Height="20" Content="Confirm" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,21,0,0" Click="Button_Click_Confirm"/>
+        <Button x:Name="Browse" Width="55" Height="20" Content="Browse" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="80,21,0,0" Click="Button_Click_BrowseIMG"/>
+        <Image x:Name="IMG" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="150" Margin="20,40,0,0"/>
         <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,60,50,278">
             <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
             <TextBox x:Name="Name" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Name" Foreground="DimGray" Text="Natsu Dragneel" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -30,7 +32,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,210,290,128">
             <materialDesign:PackIcon Kind="AccountBadgeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>
-            <TextBox x:Name="id" Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="001" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox  x:Name="id" Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID" Foreground="DimGray" Text="001" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="190,160,50,178">
             <materialDesign:PackIcon Kind="EmailOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
@@ -42,7 +44,11 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,260,290,78">
             <materialDesign:PackIcon Kind="CrownOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-            <TextBox x:Name="LTV"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Account Type" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <ComboBox  x:Name="LTV"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Account Type" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40"  >
+                <ComboBoxItem Content="LTV01" HorizontalAlignment="Left" Width="118.4"/>
+                <ComboBoxItem Content="LTV02" HorizontalAlignment="Left" Width="118.4"/>
+                <ComboBoxItem Content="LTV03" HorizontalAlignment="Left" Width="118.4"/>
+            </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,310,290,28">
             <materialDesign:PackIcon Kind="CalendarOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
@@ -50,10 +56,11 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Height="40" Width="150" Margin="20,160,290,178">
             <materialDesign:PackIcon Kind="IdentificationCardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-            <TextBox x:Name="cmnd"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Bottom" />
+            <TextBox  x:Name="cmnd"  Margin="5,0,0,0" materialDesign:HintAssist.Hint="ID Number" Foreground="DimGray" Text="VIP" FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Bottom" />
         </StackPanel>
         <Button x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="230,320,80,18" Click="Button_Click">
             Complete
         </Button>
+      
     </Grid>
 </Window>
