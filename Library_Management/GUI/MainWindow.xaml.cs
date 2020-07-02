@@ -30,16 +30,16 @@ namespace Library_Management
             InitializeComponent();
             int LoginResult = 0;
             
-            while (LoginResult != 1)
+            while (LoginResult == 0)
             {
                 login.ShowDialog();
                 LoginResult = login.Login_Result;
-                if (LoginResult == -1)
-                {
-                    Application.Current.Shutdown();
-                }
-                
             }
+            if (LoginResult == -1)
+            {
+                Application.Current.Shutdown();
+            }
+
             MainGrid.Children.Clear();
             MainGrid.Children.Add(dashBoard);
         }

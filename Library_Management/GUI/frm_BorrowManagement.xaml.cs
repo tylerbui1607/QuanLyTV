@@ -47,6 +47,7 @@ namespace Library_Management.GUI
                 {
                     if (row != null)
                     {
+                        GridInfo.Visibility = Visibility.Visible;
                         //AccImg.ImageSource = new BitmapImage(new Uri(row["Anh"].ToString(), UriKind.RelativeOrAbsolute));
                         tlbname.Text = row["HoTen"].ToString();
                         tlbid.Text = row["IDTV"].ToString();

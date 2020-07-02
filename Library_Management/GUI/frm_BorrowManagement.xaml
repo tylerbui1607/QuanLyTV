@@ -27,9 +27,9 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="6*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" >
+                    <Grid x:Name="GridInfo" Grid.Column="0" Visibility="Hidden" >
                         <Rectangle Width="166" Height="280" Stroke="LightSlateGray" Margin="20,3,0,0" StrokeThickness="1" Fill="{x:Null}" RadiusY="8" RadiusX="8" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                        <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                        <StackPanel Orientation="Vertical" Margin="0,5,0,0" >
                             <Border CornerRadius="8,8,8,8" Width="160" Height="160" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,0,0,0">
                                 <Border.Background>
                                     <ImageBrush x:Name="AccImg" Stretch="Fill" />

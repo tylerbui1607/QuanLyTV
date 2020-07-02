@@ -57,7 +57,8 @@ namespace Library_Management.GUI
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            Login321();
+            Login_Result = 1;
+            this.Close();
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

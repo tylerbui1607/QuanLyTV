@@ -7,42 +7,90 @@
              xmlns:local="clr-namespace:Library_Management.GUI"
              mc:Ignorable="d" 
              Padding="0" WindowStyle="None"
-             d:DesignHeight="300" Width="590" Background="WhiteSmoke">
-    <Grid Width="580" Height="Auto">
+            AllowsTransparency="True"
+             WindowStartupLocation="Manual"
+        Top="150" Left="350"
+             Height="360" Width="660" Background="DimGray" >
+    <Grid Width="650" Height="Auto" Margin="5,5,5,5" Background="WhiteSmoke">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="Auto" MinHeight="96"/>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="320" MinHeight="100"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock x:Name="tlbid" Text="ID : ID Customer" FontWeight="Bold" HorizontalAlignment="Left" FontSize="13" Width="150" Height="30" TextAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Text="Call Card" FontWeight="Bold" FontSize="13" Width="150" Height="30" TextAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock x:Name="tlbid" Text=" ID : ID Customer" FontWeight="Bold" HorizontalAlignment="Left" FontSize="13" Width="150" Height="30" TextAlignment="Left" Margin="0,5,0,0"/>
+            <TextBlock Text="Borrow Book" FontWeight="Bold" FontSize="13" Width="150" Height="30" TextAlignment="Center" Margin="0,5,0,0"/>
             <TextBox x:Name="search" FontWeight="Bold" Foreground="DimGray" FontSize="13"
-             materialDesign:HintAssist.Hint="Name Search" VerticalAlignment="Center" Width="150" Margin="320,0,5,0" TextChanged="TextBox_TextChanged"/>
+             materialDesign:HintAssist.Hint="Name Search" VerticalAlignment="Center" Width="150" Margin="400,0,5,0" TextChanged="TextBox_TextChanged"/>
             <Button Width="45" Height="20" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="Gray" Margin="0,0,5,0" Content="Close" Foreground="DimGray" FontSize="12" Padding="0" Click="btnback"/>
         </Grid>
-        <Grid Grid.Row="1" Margin="0,0,0,-78" Grid.RowSpan="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="14*"/>
-            </Grid.ColumnDefinitions>
-            <Grid VerticalAlignment="Top" Grid.Column="0" Height="90">
-                <TextBlock Grid.Column="0" Width="60" Height="20" VerticalAlignment="Top" Text="List Book: " FontSize=" 13" FontWeight="Bold"/>
-                <Button Margin="0,10,0,0" Background="{x:Null}" BorderBrush="DimGray" Width="50" Height="60" BorderThickness="0.5" Foreground="DimGray" Padding="0">
-                    <materialDesign:PackIcon Kind="AddCircleOutline" Width="25" Height="25"/>
-                </Button>
-            </Grid>
+        <Grid Grid.Row="1">
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="229*"/>
-                    <ColumnDefinition Width="279*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="8*"/>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="listbor"/>
-                <DataGrid x:Name="databook" Grid.Column="1" Height="221" VerticalAlignment="Top" SelectionChanged="databook_SelectionChanged">
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="280"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text=" Selected Books:" FontSize="15" Height="25" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <ListView ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" x:Name="listbor" Height="255" VerticalAlignment="Top" Margin="0,25,0,0"/>
+                    </Grid>
+                    <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Width="160" Content="Completed" Foreground="DimGray" Height="30" Background="{x:Null}" BorderBrush="DimGray"  Click="Button_Click"/>
+                </Grid>
+                <DataGrid x:Name="databook" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" Grid.Column="1" Height="319" SelectionChanged="databook_SelectionChanged" Margin="5,0,0,0" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Width="40" Binding="{Binding IDSach}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                    <Setter Property="Margin" Value="5,0,5,0" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Ten}" >
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                    <Setter Property="Margin" Value="5,0,5,0" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Author" Width="150"  >
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                    <Setter Property="Margin" Value="5,0,5,0" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Height" Value="30"/>
+                            <Setter Property="Foreground" Value="DimGray"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="BorderBrush" Value="{x:Null}"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="Foreground" Value="DimGray"/>
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="FontSize" Value="16"/>
+                        </Style>
+                    </DataGrid.CellStyle>
                 </DataGrid>
             </Grid>
         </Grid>
-        <Button Grid.Row="2" Content="Completed" Height="Auto" Background="#58FA58" BorderBrush="{x:Null}" Margin="215,129,215,-125" Click="Button_Click"/>
+
     </Grid>
 
 </Window>

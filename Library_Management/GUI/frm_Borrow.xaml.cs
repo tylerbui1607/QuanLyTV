@@ -115,6 +115,11 @@ namespace Library_Management.GUI
             }
         }
 
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
         //private void Slbook_TextChanged(object sender, TextChangedEventArgs e)
         //{
         //    foreach (frm_BorrowLvItem item in listbor.Items)

@@ -250,6 +250,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Resources\bookadd_icon.png" />
+  </ItemGroup>
+ <ItemGroup>
     <Resource Include="Resources\Natsu.png" />
   </ItemGroup>
   <ItemGroup>
