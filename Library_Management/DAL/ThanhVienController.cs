@@ -57,5 +57,17 @@ namespace Library_Management.DAL
             }
             return dta;
         }
+
+        public async Task<DataTable> GetThanhVienTheoID(int ID)
+        {
+            DataTable dta = new DataTable();
+            HttpClient client = new HttpClient();
+            var response = client.GetAsync("https://localhost:5001/ThanhVien/SearchTV/"+ID.ToString()).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                dta = await response.Content.ReadAsAsync<DataTable>();
+            }
+            return dta;
+        }
     }
 }

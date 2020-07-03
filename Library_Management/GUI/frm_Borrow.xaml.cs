@@ -24,18 +24,22 @@ namespace Library_Management.GUI
     public partial class frm_Borrow : Window
     {
         string idtvtam;
-        BUS_TV BUSTV = new BUS_TV();
-        BUS_PM BUSPM = new BUS_PM();
+        //BUS_TV BUSTV = new BUS_TV();
+        // BUS_PM BUSPM = new BUS_PM();
         DTO_PHIEUMUON dtopm;
-        BUS_CTM BUSCTM = new BUS_CTM();
+        // BUS_CTM BUSCTM = new BUS_CTM();
         DTO_CTMUON dtoctm;
         BUS_Book BUSBOOK = new BUS_Book();
+        ChiTietMuonController CTMcontrol = new ChiTietMuonController();
+        PhieuMuonController PMcontrol = new PhieuMuonController();
+        SachController Scontrol = new SachController();
         public frm_Borrow(string idtv)
         {
             InitializeComponent();
             idtvtam = idtv;
             tlbid.Text = "ID : " + idtv;
-            databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
+            //databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
+            databook.ItemsSource = Scontrol.GetBook().Result.DefaultView;
             databook.IsReadOnly = true;
         }
 
@@ -48,10 +52,10 @@ namespace Library_Management.GUI
         {
             if (search.Text != "")
             {
-                databook.ItemsSource = BUSBOOK.searchBookVer2(search.Text).DefaultView;
+                databook.ItemsSource = Scontrol.SeachBookVer2(search.Text).Result.DefaultView;//BUSBOOK.searchBookVer2(search.Text).DefaultView;
             }
             else
-                databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
+                databook.ItemsSource = Scontrol.GetBook().Result.DefaultView;//databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
         }
 
         private void databook_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -101,14 +105,17 @@ namespace Library_Management.GUI
             if (counttam > 0)
             {               
                 dtopm = new DTO_PHIEUMUON(idtvtam, "501", DateTime.Now, "0");
-                BUSPM.addPM(dtopm);
+                //BUSPM.addPM(dtopm);
+                PMcontrol.AddPM(dtopm);
                 foreach (frm_BorrowLvItem item in listbor.Items)
                 {
                     if (item.slbook.Text != "0")
                     {
-                        int tam = BUSPM.GetNewPM();
+                        //int tam = BUSPM.GetNewPM();
+                        int tam = PMcontrol.GetNewPM().Result;
                         dtoctm = new DTO_CTMUON(tam.ToString(), item.idbook.Text, item.slbook.Text, "0");
-                        BUSCTM.addCTM(dtoctm);
+                        //BUSCTM.addCTM(dtoctm);
+                        CTMcontrol.AddCTM(dtoctm);
                     }
                 }
                 this.Close();

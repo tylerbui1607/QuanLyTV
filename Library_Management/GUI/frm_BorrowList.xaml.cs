@@ -16,6 +16,7 @@ using Library_Management.BUS;
 using Library_Management.DTO;
 using System.Data;
 using Microsoft.Win32;
+using Library_Management.DAL;
 
 namespace Library_Management.GUI
 {
@@ -24,11 +25,16 @@ namespace Library_Management.GUI
     /// </summary>
     public partial class frm_BorrowList : UserControl
     {
-        BUS_TV BUSTV = new BUS_TV();
-        BUS_PM BUSPM = new BUS_PM();
-        BUS_CTM BUSCTM = new BUS_CTM();
-        BUS_Book BUSBOOK = new BUS_Book();
-        BUS_PT BUSPT = new BUS_PT();
+        //BUS_TV BUSTV = new BUS_TV();
+        //BUS_PM BUSPM = new BUS_PM();
+        //BUS_CTM BUSCTM = new BUS_CTM();
+        //BUS_Book BUSBOOK = new BUS_Book();
+        //BUS_PT BUSPT = new BUS_PT();
+        ThanhVienController TVcontrol = new ThanhVienController();
+        ChiTietMuonController CTMcontrol = new ChiTietMuonController();
+        PhieuMuonController PMcontrol = new PhieuMuonController();
+        PhieuTraController PTcontrol = new PhieuTraController();
+        SachController Scontrol = new SachController();
         DTO_PHIEUTRA dtopt;
         DTO_PHIEUMUON dtopm;
         DTO_CTMUON dtoctm;
@@ -43,7 +49,8 @@ namespace Library_Management.GUI
             double tam = 0;
             double tam1 = 0;
             dtopm = new DTO_PHIEUMUON(idpm.Text, "1");
-            BUSPM.suaPM(dtopm);
+            //BUSPM.suaPM(dtopm);
+            PMcontrol.UpdatePM(dtopm);
             foreach (frm_BorrowLvItem item in LstView.Items)
             {
                 if (item.checkbook.IsChecked == true)
@@ -52,10 +59,11 @@ namespace Library_Management.GUI
                 }
                 else
                 {
-                    tam1++;
+                    tam1 += Int32.Parse(item.slbook.Text);
                     dtoctm = new DTO_CTMUON(idpm.Text, item.idbook.Text, item.slbook.Text, "0");
                 }
-                BUSCTM.suaCTM(dtoctm);
+                //BUSCTM.suaCTM(dtoctm);
+                CTMcontrol.UpdateCTM(dtoctm);
 
             }
             DateTime dtnow = DateTime.Now;
@@ -71,7 +79,8 @@ namespace Library_Management.GUI
                 tien += tam1 * 5000; 
             }    
             dtopt = new DTO_PHIEUTRA(idpm.Text, idtv.Text, "501", DateTime.Now, tien.ToString());
-            BUSPT.addPT(dtopt);
+            //BUSPT.addPT(dtopt);
+            PTcontrol.AddPT(dtopt);
         }
     }
 }

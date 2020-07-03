@@ -144,6 +144,10 @@
     <Compile Include="BUS\BUS_PT.cs" />
     <Compile Include="BUS\BUS_TV.cs" />
     <Compile Include="BUS\BUS_Book.cs" />
+    <Compile Include="BUS\ChiTietMuonController.cs" />
+    <Compile Include="BUS\PhieuMuonController.cs" />
+    <Compile Include="BUS\PhieuTraController.cs" />
+    <Compile Include="BUS\SachController.cs" />
     <Compile Include="DAL\DAL_CTM.cs" />
     <Compile Include="DAL\DAL_EX.cs" />
     <Compile Include="DAL\DAL_LOGIN.cs" />
@@ -253,7 +257,7 @@
   <ItemGroup>
     <Resource Include="Resources\bookadd_icon.png" />
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\Natsu.png" />
   </ItemGroup>
   <ItemGroup>

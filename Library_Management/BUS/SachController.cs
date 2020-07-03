@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Library_Management.BUS;
+using Library_Management.DTO;
+using System.Net.Http;
+using System.Windows.Threading;
+using System.Net;
+using System.Data;
+
+namespace Library_Management.BUS
+{
+    class SachController
+    {
+        public async Task<DataTable> GetBook()
+        {
+            DataTable dta = new DataTable();
+            HttpClient client = new HttpClient();
+            var response = client.GetAsync("https://localhost:5001/Sach").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                dta = await response.Content.ReadAsAsync<DataTable>();
+            }
+            return dta;
+        }
+
+        public async Task<DataTable> FindBook(int ID)
+        {
+            DataTable dta = new DataTable();
+            HttpClient client = new HttpClient();
+            var response = client.GetAsync("https://localhost:5001/Sach/FindBook/" + ID.ToString()).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                dta = await response.Content.ReadAsAsync<DataTable>();
+            }
+            return dta;
+        }
+
+        public async Task<DataTable> SeachBookVer2(string str)
+        {
+            DataTable dta = new DataTable();
+            HttpClient client = new HttpClient();
+            var response = client.GetAsync("https://localhost:5001/Sach/SearchBookVer2/" + str).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                dta = await response.Content.ReadAsAsync<DataTable>();
+            }
+            return dta;
+        }
+    }
+}
