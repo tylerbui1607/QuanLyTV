@@ -26,6 +26,27 @@ namespace API.Controllers
             return bus.GetBook();
         }
 
+        [Route("SearchBook")]
+        [HttpGet]
+        public DataTable SearchBook(string name)
+        {
+            return bus.searchBook(name);
+        }
+
+        [Route("AddBook")]
+        [HttpPost]
+        public bool AddBook([FromBody] DTO_Sach book)
+        {
+            return bus.themBook(book);
+        }
+
+        [Route("UpdateBook")]
+        [HttpPut]
+        public bool UpdateBook([FromBody] DTO_Sach book)
+        {
+            return bus.suaBook(book);
+        }
+
         [Route("FindBook/{ID}")]
         [HttpGet]
         public DataTable FindByID(int ID)
