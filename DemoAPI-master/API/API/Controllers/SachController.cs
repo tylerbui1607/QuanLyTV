@@ -21,12 +21,20 @@ namespace API.Controllers
         BUS_BOOK bus = new BUS_BOOK();
 
         [HttpGet]
+        public DataTable LoadBook()
+        {
+            return bus.loadBook();
+        }
+
+        [Route("GetBook")]
+        [HttpGet]
         public DataTable GetBook()
         {
             return bus.GetBook();
         }
 
-        [Route("SearchBook")]
+
+        [Route("SearchBook/{name}")]
         [HttpGet]
         public DataTable SearchBook(string name)
         {
@@ -40,7 +48,7 @@ namespace API.Controllers
             return bus.themBook(book);
         }
 
-        [Route("UpdateBook")]
+        [Route("EditBook")]
         [HttpPut]
         public bool UpdateBook([FromBody] DTO_Sach book)
         {
