@@ -12,6 +12,7 @@ namespace Library_Management.GUI
     public partial class frm_AddBook : Window
     {
         BUS_Book bus = new BUS_Book();
+        SachController S_control = new SachController();
         DTO_Book dto;
         public frm_AddBook()
         {
@@ -23,7 +24,7 @@ namespace Library_Management.GUI
             {
                 dto = new DTO_Book(Book_ID.Text, TacGia_ID.Text, NXB_ID.Text, Ten.Text, TheLoai.Text, ViTri.Text, int.Parse(SL.Text), int.Parse(SL.Text), float.Parse(Price.Text));
 
-                if (bus.themBook(dto))
+                if (S_control.AddBook(dto).Result)
                 {
                     MessageBox.Show("Thêm sách thành công");
                     this.Close();
