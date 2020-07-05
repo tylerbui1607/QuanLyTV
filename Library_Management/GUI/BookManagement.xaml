@@ -51,7 +51,7 @@
             </Grid.ColumnDefinitions>
             <DataGrid x:Name="list_Book" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" Height="460" Margin="10,8,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Width="40" Binding="{Binding IDSach}">
+                    <DataGridTextColumn Header="ID" Width="40" Binding="{Binding idSach}">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left" />
@@ -59,7 +59,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Ten}" >
+                    <DataGridTextColumn Header="Name" Width="250" Binding="{Binding ten}" >
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left" />
@@ -67,7 +67,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Author" Width="180" Binding="{Binding IDTG}">
+                    <DataGridTextColumn Header="Author" Width="180" Binding="{Binding idtg}">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Center" />
@@ -75,7 +75,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Publisher" Width="150" Binding="{Binding IDNXB}">
+                    <DataGridTextColumn Header="Publisher" Width="150" Binding="{Binding idnxb}">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left" />
@@ -83,7 +83,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Remain" Width="60" Binding="{Binding SLHienTai}">
+                    <DataGridTextColumn Header="Remain" Width="60" Binding="{Binding slHienTai}">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Center" />
@@ -91,7 +91,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Position" Width="100" Binding="{Binding ViTri}">
+                    <DataGridTextColumn Header="Position" Width="100" Binding="{Binding viTri}">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left" />
@@ -119,6 +119,7 @@
                         <Setter Property="Background" Value="{x:Null}"/>
                         <Setter Property="BorderThickness" Value="0"/>
                         <Setter Property="FontSize" Value="16"/>
+                        <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
                     </Style>
                 </DataGrid.CellStyle>
             </DataGrid>
