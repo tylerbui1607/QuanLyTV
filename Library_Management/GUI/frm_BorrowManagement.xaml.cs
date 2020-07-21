@@ -104,10 +104,10 @@ namespace Library_Management.GUI
                                     {
                                         frm_BorrowLvItem stack = new frm_BorrowLvItem();
                                         //foreach (DataRow row3 in BUSBOOK.GetBookWithID(row2["IDSach"].ToString()).Rows)
-                                        foreach (DataRow row3 in Scontrol.FindBook(Int32.Parse(row2["IDSach"].ToString())).Result.Rows)
-                                        {
-                                            stack.nabook.Text = row3["Ten"].ToString();
-                                        }           
+                                        //foreach (DataRow row3 in Scontrol.FindBook(Int32.Parse(row2["IDSach"].ToString())).Result.Rows)
+                                        //{
+                                        //    stack.nabook.Text = row3["Ten"].ToString();
+                                        //}           
                                         stack.idbook.Text = row2["IDSach"].ToString();
                                         stack.slbook.Text = row2["SL"].ToString();
                                         stack.slbook.IsReadOnly = true;

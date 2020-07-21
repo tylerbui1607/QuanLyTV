@@ -20,10 +20,12 @@ namespace API.Controllers
     public class LoginController : ControllerBase
     {
         [HttpPost]
-        public bool Login([FromBody] DTO_NhanVien Nhanvien)
+        public DTO_NhanVien Login([FromBody] DTO_NhanVien Nhanvien)
         {
             DAL_LOGIN login = new DAL_LOGIN();
-            return login.CheckLogin(Nhanvien.UserName_NV, Nhanvien.PassWord_NV);
+            NhanVien_Bus nhanVien_Bus = new NhanVien_Bus();
+            DTO_NhanVien dTO_NhanVien = new DTO_NhanVien { Active = 1, PassWord_NV = "123", HoTen_NV = "Thai" };
+            return dTO_NhanVien;
         }
     }
 }

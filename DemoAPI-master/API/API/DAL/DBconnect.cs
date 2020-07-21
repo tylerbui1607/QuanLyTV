@@ -15,7 +15,7 @@ namespace API.DAL
     public class DBConnect
     {
         protected
-            SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=Library;Integrated Security=True");
     }
 
 }

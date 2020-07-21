@@ -80,7 +80,8 @@ namespace Library_Management.GUI
                 if (counttam == 0)
                 {
                     frm_BorrowLvItem lvitem = new frm_BorrowLvItem();
-                    lvitem.nabook.Text = Row_Selected["Ten"].ToString();
+                    lvitem.nabook.Width = 10;
+                    lvitem.nabook.Visibility = Visibility.Hidden;
                     lvitem.idbook.Text = Row_Selected["IDSach"].ToString();
                     lvitem.slbook.Text = sltam.ToString();
                     listbor.Items.Add(lvitem);
@@ -88,6 +89,7 @@ namespace Library_Management.GUI
                     //lvitem.slbook.TextChanged += Slbook_TextChanged;
                 }
             }
+            frmBorrow.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

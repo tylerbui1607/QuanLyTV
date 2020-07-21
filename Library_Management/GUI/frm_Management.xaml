@@ -16,21 +16,20 @@
         <TextBlock Text="Manager Page" FontSize="20" Foreground="DimGray" FontWeight="Bold" Padding="0" Width="200" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-
             </Grid>
             <Grid Grid.Column="1">
-                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="100" Height="100" Margin="0,30,0,320">
-                    <materialDesign:PackIcon Kind="AccountBoxes" Foreground="DimGray" Width="60" Height="60"/>
+                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="80" Height="80" Margin="0,10,0,370">
+                    <materialDesign:PackIcon Kind="AccountBoxes" Foreground="DimGray" Width="50" Height="50"/>
                 </Button>
-                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="100" Height="100" Margin="0,160,0,190">
-                    <materialDesign:PackIcon Kind="BookPlusMultiple" Foreground="DimGray" Width="60" Height="60"/>
+                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="80" Height="80" Margin="0,100,0,280">
+                    <materialDesign:PackIcon Kind="BookPlusMultiple" Foreground="DimGray" Width="50" Height="50"/>
                 </Button>
-                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="100" Height="100" Margin="0,300,0,50">
-                    <materialDesign:PackIcon Kind="Assessment" Foreground="DimGray" Width="60" Height="60"/>
+                <Button Background="{x:Null}" BorderBrush="DimGray" BorderThickness="2" Width="80" Height="80" Margin="0,190,0,190">
+                    <materialDesign:PackIcon Kind="Assessment" Foreground="DimGray" Width="50" Height="50"/>
                 </Button>
             </Grid>
         </Grid>

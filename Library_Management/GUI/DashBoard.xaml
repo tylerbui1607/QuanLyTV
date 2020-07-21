@@ -10,99 +10,19 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="152.333"/>
-            <RowDefinition Height="139"/>
+            <RowDefinition Height="470"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="5,5,5,5">
-            <TextBlock Text="DashBoard" Foreground="DimGray" FontSize="20" FontWeight="Bold" FontFamily="Cooper" Padding="8"/>
+        <Grid Grid.Row="0" Margin="5,10,5,5">
+            <TextBlock Text="DashBoard" Foreground="DimGray" FontSize="20" FontWeight="Bold" FontFamily="Time New Roman" Padding="8"/>
         </Grid>
-        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="29,10.667">
+        <Grid Grid.Row="1" Margin="0,10,0,0" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Width="175" Height="100" Margin="5" Background="MediumPurple">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Books:" FontSize="20" Foreground="LightGray" />
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="3857" FontSize="22" Foreground="White" FontWeight="Bold"/>
-                    <Grid Grid.Column="1" >
-                        <materialDesign:PackIcon Padding="0" Kind="FileChartOutline" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="1" Width="175" Height="100" Margin="5" Background="#009788">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Authors:" FontSize="20" Foreground="LightGray" />
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="2603" FontSize="22" Foreground="White" FontWeight="Bold"/>
-                    <Grid Grid.Column="1" >
-                        <materialDesign:PackIcon Padding="0" Kind="Feather" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="2" Width="175" Height="100" Margin="5,5" Background="#0e75c9">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Members:" FontSize="20" Foreground="LightGray" />
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="4567" FontSize="22" Foreground="White" FontWeight="Bold"/>
-                    <Grid Grid.Column="1" >
-                        <materialDesign:PackIcon Padding="0" Kind="AccountBadgeOutline" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="3" Width="175" Height="100" Margin="5" Background="#385591">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Staffs:" FontSize="20" Foreground="LightGray" />
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="45" FontSize="22" Foreground="White" FontWeight="Bold"/>
-                    <Grid Grid.Column="1" >
-                        <materialDesign:PackIcon Padding="0" Kind="AccountArrowLeftOutline" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="2" Margin="0,0.333,0,0" Grid.RowSpan="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="575"/>
-                <ColumnDefinition Width="205"/>
+                <ColumnDefinition Width="608"/>
+                <ColumnDefinition Width="180"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <StackPanel>
-                    <Image Source="/Resources/library.jpg" Width="520" Height="280" Margin="20,10,0,0" />
+                    <Image Stretch="Fill" Source="/Resources/poster6.jpg" Width="580" Height="430" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" >
@@ -110,46 +30,67 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Background="#2AAD83"  Width="175" Height="100"   Margin="0,10,0,10">
+                <Grid Grid.Row="0" Width="175" Height="100" Margin="0,0,0,5" Background="MediumPurple">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Income:" FontSize="20" Foreground="LightGray" />
+                    <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Books:" FontSize="20" Foreground="LightGray" />
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="28"/>
+                            <ColumnDefinition Width="32.667"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="15,10,27.667,-0.667" TextAlignment="Left" Text="3857" FontSize="22" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                        <Grid Grid.Column="1" Grid.ColumnSpan="2" Margin="0.333,0,0.334,0.333" >
+                            <materialDesign:PackIcon Padding="0" Kind="FileChartOutline" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1" Width="175" Height="100" Margin="0,5,0,5" Background="#009788">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Authors:" FontSize="20" Foreground="LightGray" />
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="4675" FontSize="22" Foreground="White" FontWeight="Bold"/>
+                        <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="2603" FontSize="22" Foreground="White" FontWeight="Bold"/>
                         <Grid Grid.Column="1" >
-                            <materialDesign:PackIcon Padding="0" Kind="CashPlus" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <materialDesign:PackIcon Padding="0" Kind="Feather" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid Grid.Row="1" Background="#A14750"  Width="175" Height="100"   Margin="0,10,0,10">
+                <Grid Grid.Row="2" Width="175" Height="100" Margin="0,5,0,5" Background="#0e75c9">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Expanditure:" FontSize="20" Foreground="LightGray" />
+                    <TextBlock Grid.Row="0" Margin="5,15,0,0" Text="Total Members:" FontSize="20" Foreground="LightGray" />
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="45" FontSize="22" Foreground="White" FontWeight="Bold"/>
+                        <TextBlock Grid.Column="0" Margin="15,10,0,0" TextAlignment="Left"  Grid.Row="1" Text="4567" FontSize="22" Foreground="White" FontWeight="Bold"/>
                         <Grid Grid.Column="1" >
-                            <materialDesign:PackIcon Padding="0" Kind="CashMinus" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <materialDesign:PackIcon Padding="0" Kind="AccountBadgeOutline" Foreground="LightGray" Width="55" Height="55" VerticalAlignment="Center" Margin="5,0,0,0"/>
                         </Grid>
                     </Grid>
                 </Grid>
-                <TextBlock Grid.Row="2" TextAlignment="Center" TextWrapping="Wrap" Foreground="Gray" Margin="0,10,0,0" HorizontalAlignment="Center">
-                      Copyright by Dui 
+                <TextBlock Grid.Row="3" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Foreground="Gray" Margin="0,10,0,0" HorizontalAlignment="Center">
+                    Do an nhap mon CNPM - SE104 
+                    <LineBreak/>
+                    De tai : Quan ly thu vien
                     <LineBreak/>
                     18521381 © 2020
-
                 </TextBlock>
             </Grid>
         </Grid>
