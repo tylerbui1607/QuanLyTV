@@ -42,14 +42,20 @@
                 <ListView x:Name="ListViewMenu" Margin="0 80" Foreground="White" FontFamily="Candara Light" SelectionChanged="ListView_SelectionChanged">
                     <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
                         <StackPanel Orientation="Horizontal" >
-                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="CameraTimer" Width="30" Height="30" Margin="15,5,5,5"/>
-                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="DashBoard" Width="auto" Height="30" FontSize="16" Margin="5,10"  />
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="HomeCityOutline" Width="30" Height="30" Margin="15,5,5,5"/>
+                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Home Page" Width="auto" Height="30" FontSize="16" Margin="5,10"  />
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
                         <StackPanel Orientation="Horizontal" >
-                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Books" Width="30" Height="30" Margin="15,5,5,5"/>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="BookOpenPageVariant" Width="30" Height="30" Margin="15,5,5,5"/>
                             <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Book Management" Width="auto" Height="30" FontSize="16" Margin="5,10" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="BusinessCardOutline" Width="30" Height="30" Margin="15,5,5,5"/>
+                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Reader" Width="auto" Height="30" FontSize="16" Margin="5,10" />
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
@@ -60,20 +66,8 @@
                     </ListViewItem>
                     <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
                         <StackPanel Orientation="Horizontal" >
-                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="BusinessCardOutline" Width="30" Height="30" Margin="15,5,5,5"/>
-                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Accounts" Width="auto" Height="30" FontSize="16" Margin="5,10" />
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
-                        <StackPanel Orientation="Horizontal" >
-                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="DeveloperBoard" Width="30" Height="30" Margin="15,5,5,5"/>
-                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Communication" Width="auto" Height="30" FontSize="16" Margin="5,10" />
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Padding="0" Height="55"  Selected="ListViewItem_Selected" >
-                        <StackPanel Orientation="Horizontal" >
-                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="ScrollTextOutline" Width="30" Height="30" Margin="15,5,5,5"/>
-                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Reports" Width="auto" Height="30" FontSize="16" Margin="5,10" />
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="ChartBar" Width="30" Height="30" Margin="15,5,5,5"/>
+                            <TextBlock Padding="0,5,0,0" VerticalAlignment="Center" Text="Report" Width="auto" Height="30" FontSize="16" Margin="5,10" />
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

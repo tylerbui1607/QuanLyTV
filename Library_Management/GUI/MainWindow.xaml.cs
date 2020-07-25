@@ -68,13 +68,13 @@ namespace Library_Management
                 case 1:
                     MainGrid.Children.Add(bookManagement);
                     break;
-                case 3:
+                case 2:
                     MainGrid.Children.Add(accountManagement);
                     break;
-                case 2:
+                case 3:
                     MainGrid.Children.Add(borrowManagement);
                     break;
-                case 5:
+                case 4:
                     MainGrid.Children.Add(management);
                     break;
             }

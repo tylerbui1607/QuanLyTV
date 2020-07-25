@@ -73,9 +73,9 @@
 
             <Grid Grid.Column="2" Margin="0,0,0,0" >
                 <Grid Grid.Column="0">
-                    <DataGrid Grid.Row="1" x:Name="ListAccount" Background="WhiteSmoke"  Height="450" VerticalAlignment="Top" Width="260" HorizontalAlignment="Center" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid Grid.Row="1" x:Name="ListStaff" Background="WhiteSmoke"  Height="450" VerticalAlignment="Top" Width="260" HorizontalAlignment="Center" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="  ID" Width="60" Binding="{Binding idtv}">
+                            <DataGridTextColumn Header="  ID" Width="60" Binding="{Binding idnv}">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="HorizontalAlignment" Value="Center" />
