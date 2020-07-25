@@ -27,12 +27,11 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="6*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid x:Name="GridInfo" Grid.Column="0" Visibility="Hidden" >
-                        <Rectangle Width="166" Height="280" Stroke="LightSlateGray" Margin="20,3,0,0" StrokeThickness="1" Fill="{x:Null}" RadiusY="8" RadiusX="8" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <Grid x:Name="GridInfo" Grid.Column="0" >
                         <StackPanel Orientation="Vertical" Margin="0,5,0,0" >
                             <Border CornerRadius="8,8,8,8" Width="160" Height="160" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,0,0,0">
                                 <Border.Background>
-                                    <ImageBrush x:Name="AccImg" Stretch="Fill" />
+                                    <ImageBrush x:Name="AccImg" ImageSource="/Resources/account.png" Stretch="Fill" />
                                 </Border.Background>
                             </Border>
                             <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
@@ -48,7 +47,7 @@
                                 <TextBlock x:Name="tlbid" Margin="0" Foreground="DimGray" Height="20" FontSize="13" FontWeight="Bold"/>
                             </StackPanel>
                             <Button Padding="0" Margin="30,10,25,20" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" BorderThickness="0.5" Width="145" Height="30" Click="BtnLoadbook">
-                                Loan Book
+                                Borrow Book
                             </Button>
                         </StackPanel>
                     </Grid>

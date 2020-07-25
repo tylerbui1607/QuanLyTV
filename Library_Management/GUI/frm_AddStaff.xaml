@@ -70,7 +70,7 @@
                 <materialDesign:PackIcon Kind="KeyboardOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
                 <PasswordBox  Margin="5,0,0,0" materialDesign:HintAssist.Hint="Password" Foreground="DimGray"  FontWeight="Bold" Width="120" Height="40" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
             </StackPanel>
-            <Button Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="55,320,310,18">
+            <Button Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="55,320,300,18">
                 Complete
             </Button>
             <Button Background="{x:Null}" Visibility="Hidden" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="55,320,310,18">
