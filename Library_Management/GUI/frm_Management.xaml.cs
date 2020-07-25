@@ -24,5 +24,19 @@ namespace Library_Management.GUI
         {
             InitializeComponent();
         }
+
+        private void btnStaff_Click(object sender, RoutedEventArgs e)
+        {
+            gridManager.Children.Clear();
+            frm_StaffManagement staffManagement = new frm_StaffManagement();
+            gridManager.Children.Add(staffManagement);
+        }
+
+        private void btnReport_Click(object sender, RoutedEventArgs e)
+        {
+            gridManager.Children.Clear();
+            frm_Report report = new frm_Report();
+            gridManager.Children.Add(report);
+        }
     }
 }

@@ -21,8 +21,8 @@
                     <Grid Background="WhiteSmoke" Margin="0,0,0,0" Grid.Row="1" >
                         <TextBlock  Margin="250,30,90,380" Text="Information" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
                         <Image Name="IMG" Source="/Resources/Natsu.png"  HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="20,30,0,0"/>
-                        <Button x:Name="Confirm" Visibility="Hidden" Width="50" Height="20" Content="Select" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="31,11,0,0" Click="Button_Click_Confirm"/>
-                        <Button x:Name="Browse" Visibility="Hidden" Width="50" Height="20" Content="Browse" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="90,11,0,0" Click="Button_Click_BrowseIMG"/>
+                        <Button x:Name="Confirm" Visibility="Hidden" Width="50" Height="20" Content="Select" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="31,11,0,0" />
+                        <Button x:Name="Browse" Visibility="Hidden" Width="50" Height="20" Content="Browse" Background="{x:Null}" BorderBrush="DimGray" Foreground="DimGray" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="90,11,0,0" />
                         <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="220,60,20,278">
                             <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
                             <TextBox IsEnabled="False" x:Name="name" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Name" Foreground="DimGray" Text="Natsu Dragneel" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -60,16 +60,16 @@
                             </ComboBox>
                         </StackPanel>
 
-                        <Button Visibility="Hidden" x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="178,359,183.2,50.6" Click="Button_Click_Complete">
+                        <Button Visibility="Hidden" x:Name="Complete" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="178,359,183.2,50.6" >
                             Complete
                         </Button>
-                        <Button Visibility="Hidden" x:Name="Turnback" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="333,359,28.2,50.6" Click="Button_Click_Turnback" Content="Turn back"/>
+                        <Button Visibility="Hidden" x:Name="Turnback" Background="{x:Null}" Foreground="DimGray" BorderBrush="DimGray" Width="150" Height="40" Margin="333,359,28.2,50.6"  />
                     </Grid>
                 </Grid>
             </Grid>
             <Grid Grid.Column="1" Margin="0,0,0,0" >
                 <Grid Grid.Column="0">
-                    <DataGrid Grid.Row="1" x:Name="ListAccount" Background="WhiteSmoke"  Height="450" VerticalAlignment="Top" Width="230" SelectionChanged="ListAccount_SelectionChanged" HorizontalAlignment="Center" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid Grid.Row="1" x:Name="ListAccount" Background="WhiteSmoke"  Height="450" VerticalAlignment="Top" Width="230" HorizontalAlignment="Center" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="  ID" Width="40" Binding="{Binding idtv}">
                                 <DataGridTextColumn.ElementStyle>

@@ -25,6 +25,7 @@ namespace Library_Management
         GUI.frm_BorrowManagement borrowManagement = new GUI.frm_BorrowManagement();
         GUI.AccountManagement accountManagement = new GUI.AccountManagement();
         GUI.Login login = new GUI.Login();
+        GUI.frm_Management management = new GUI.frm_Management();
         public MainWindow()
         {
             InitializeComponent();
@@ -72,6 +73,9 @@ namespace Library_Management
                     break;
                 case 2:
                     MainGrid.Children.Add(borrowManagement);
+                    break;
+                case 5:
+                    MainGrid.Children.Add(management);
                     break;
             }
            
