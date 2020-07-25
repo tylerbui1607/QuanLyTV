@@ -6,13 +6,14 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Library_Management.GUI"
              mc:Ignorable="d" 
-             d:DesignHeight="400" WindowStyle="None" d:DesignWidth="520" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
+             Height="400" WindowStyle="None" Width="520" Margin="10,0,0,0" WindowStartupLocation="CenterScreen">
     <Grid Grid.Row="1" Margin="0" >
         <Grid.RowDefinitions>
             <RowDefinition Height="18*"/>
 
         </Grid.RowDefinitions>
         <Grid Background="WhiteSmoke" Margin="0,0,0,0" >
+            <Button Content="Close" x:Name="Turn_back" Click="Turn_back_Click" Foreground="DimGray" Background="{x:Null}" BorderBrush="DimGray" Width="50" Height="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,10,0,328" Text="Information" FontSize="20" FontWeight="Bold" Foreground="DimGray" Height="40" Width="120" TextAlignment="Center"/>
             <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="20,60,275,278">
                 <materialDesign:PackIcon Kind="AccountOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>

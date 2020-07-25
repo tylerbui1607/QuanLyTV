@@ -23,6 +23,8 @@ namespace Library_Management.GUI
         public frm_Management()
         {
             InitializeComponent();
+            frm_StaffManagement staffManagement = new frm_StaffManagement();
+            gridManager.Children.Add(staffManagement);
         }
 
         private void btnStaff_Click(object sender, RoutedEventArgs e)

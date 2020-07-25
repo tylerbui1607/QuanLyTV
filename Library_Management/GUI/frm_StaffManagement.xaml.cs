@@ -24,5 +24,11 @@ namespace Library_Management.GUI
         {
             InitializeComponent();
         }
+
+        private void btnAddStaff_Click(object sender, RoutedEventArgs e)
+        {
+            frm_AddStaff frm = new frm_AddStaff();
+            frm.ShowDialog();
+        }
     }
 }

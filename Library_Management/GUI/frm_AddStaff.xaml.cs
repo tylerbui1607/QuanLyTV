@@ -24,5 +24,11 @@ namespace Library_Management.GUI
         {
             InitializeComponent();
         }
+
+        private void Turn_back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
