@@ -41,6 +41,6 @@
             <materialDesign:PackIcon Kind="Package" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
             <TextBox Padding="0" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Quantity" Foreground="DimGray" Text="Book's Quantity" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </StackPanel>
-        <Button Content="Completed" Foreground="DimGray" Background="{x:Null}" BorderBrush="DimGray" Width="150" Height="40" Margin="380,230,80,30"/>
+        <Button Content="Completed" Foreground="DimGray" Background="{x:Null}" BorderBrush="DimGray" Width="150" Height="40" Margin="380,230,80,30" />
     </Grid>
 </Window>

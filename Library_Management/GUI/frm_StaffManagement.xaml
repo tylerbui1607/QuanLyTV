@@ -34,7 +34,7 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="220,160,20,178">
                             <materialDesign:PackIcon Kind="EmailOutline" Width="22" Foreground="DimGray" Height="22" VerticalAlignment="Bottom"/>
-                            <TextBox IsEnabled="True" x:Name="email" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Email" Foreground="DimGray" Text="18521381@gm.uit.edu.vn" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox IsEnabled="True" x:Name="email" Margin="5,0,0,0" materialDesign:HintAssist.Hint="Email" Foreground="DimGray" FontWeight="Bold" Width="190" Height="40" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Height="40" Width="220" Margin="220,210,20,128">
                             <materialDesign:PackIcon Kind="HomeOutline" Foreground="DimGray" Width="22" Height="22" VerticalAlignment="Bottom"/>

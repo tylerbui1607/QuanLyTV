@@ -38,9 +38,10 @@ namespace Library_Management.GUI
             InitializeComponent();
             idtvtam = idtv;
             tlbid.Text = "ID : " + idtv;
-            //databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
-            databook.ItemsSource = Scontrol.GetBook().Result.DefaultView;
+            databook.ItemsSource = Scontrol.LoadBook().Result.DefaultView;
             databook.IsReadOnly = true;
+            //databook.ItemsSource = BUSBOOK.GetBook().DefaultView;
+            
         }
 
         private void btnback(object sender, RoutedEventArgs e)
@@ -103,7 +104,7 @@ namespace Library_Management.GUI
                     counttam++;
                 }
             }
-
+            Console.WriteLine("vao");
             if (counttam > 0)
             {               
                 dtopm = new DTO_PHIEUMUON(idtvtam, "501", DateTime.Now, "0");
